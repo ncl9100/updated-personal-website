@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Nathan's Hobbies</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Hobbies & Interests</h1>
+                <p class="subtitle">I have a life outside of school</p>
+            </header>
+            
+            <div class="content">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="hobbies.html">Hobbies</a></li>
+                        <li><a href="family.html">Family & Friends</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <p class="typewriter">
+                    <span class="typewriter-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+
+                <div class="hobby-section">
+                    <h3>Violin</h3>
+                    <p>Ling ling practices 40 hours a day...</p>
+                </div>
+                
+                <div class="hobby-section">
+                    <h3>Soccer</h3>
+                    <p>Used to play competitively for De Anza Force and for varsity at my high school, but now I just play pick-up games for fun at the pier.</p>
+                </div>
+                
+                <div class="hobby-section">
+                    <h3>Running</h3>
+                    <p>New hobby I picked up in college, but I'm not very good at it.</p>
+                </div>
+                
+                <div class="hobby-section">
+                    <h3>Eating</h3>
+                    <p>I'm a big back</p>
+                </div>
+                <div class="hobby-section">
+                    <h3>Video Games</h3>
+                    <p>I play Minecraft, Pokemon Go, and a few other games.</p>
+                </div>
+                
+                <h2 id="photo-gallery">Photo Gallery</h2>
+                
+                <!-- Slideshow Container -->
+                <div class="slideshow-container">
+                    <div class="slideshow-wrapper">
+                        <div class="slide active">
+                            <img src="../assets/images/soccer_with_the_boys.JPG" alt="Playing soccer with friends">
+                            <div class="slide-caption">Soccer at the pier with friends</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/Soccer1.jpg" alt="Soccer game">
+                            <div class="slide-caption">de anza force</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/Soccer2.jpg" alt="Soccer practice">
+                            <div class="slide-caption">de anza force</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/run_club.JPG" alt="Running club">
+                            <div class="slide-caption">NYU Running club </div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/biking.jpg" alt="Biking adventure">
+                            <div class="slide-caption">biking with brother</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/favorite_restaurant_taiwan.JPG" alt="Taiwanese restaurant">
+                            <div class="slide-caption">my favorite Taiwanese restaurant (with grandparents) - amazing food!</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/fogo_de_chao.jpg" alt="Fogo de Chao">
+                            <div class="slide-caption">Fogo de Chao - Brazilian steakhouse experience</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/statue_of_liberty.jpg" alt="Statue of Liberty">
+                            <div class="slide-caption">Visiting the Statue of Liberty with my dad</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../assets/images/bull_market.JPG" alt="Bull market">
+                            <div class="slide-caption">Exploring the financial district with my dad</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="slideshow-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+                    <button class="slideshow-btn next-btn" onclick="changeSlide(1)">❯</button>
+                    
+                    <!-- Dot Indicators -->
+                    <div class="slideshow-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
+                        <span class="dot" onclick="currentSlide(9)"></span>
+                    </div>
+                </div>
+                
+                <!-- Thumbnail Navigation -->
+                <div class="thumbnail-nav">
+                    <img src="../assets/images/soccer_with_the_boys.JPG" alt="Soccer" onclick="currentSlide(1)" class="thumbnail active">
+                    <img src="../assets/images/Soccer1.jpg" alt="Soccer" onclick="currentSlide(2)" class="thumbnail">
+                    <img src="../assets/images/Soccer2.jpg" alt="Soccer" onclick="currentSlide(3)" class="thumbnail">
+                    <img src="../assets/images/run_club.JPG" alt="Running" onclick="currentSlide(4)" class="thumbnail">
+                    <img src="../assets/images/biking.jpg" alt="Biking" onclick="currentSlide(5)" class="thumbnail">
+                    <img src="../assets/images/favorite_restaurant_taiwan.JPG" alt="Food" onclick="currentSlide(6)" class="thumbnail">
+                    <img src="../assets/images/fogo_de_chao.jpg" alt="Food" onclick="currentSlide(7)" class="thumbnail">
+                    <img src="../assets/images/statue_of_liberty.jpg" alt="NYC" onclick="currentSlide(8)" class="thumbnail">
+                    <img src="../assets/images/bull_market.JPG" alt="NYC" onclick="currentSlide(9)" class="thumbnail">
+                </div>
+                
+            </div>
+            <footer>
+                <p>Copyright &copy; 2025 Nathan Liu</p>
+            </footer>
+        </div>
+        
+        <script src="../js/typewriter.js"></script>
+        <script src="../js/slideshow.js"></script>
+    </body>
+</html>
