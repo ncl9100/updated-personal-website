@@ -9,4 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.initializeSkillsBubbles) {
         window.initializeSkillsBubbles();
     }
+    
+    // Initialize mobile navigation
+    if (window.initializeMobileNav) {
+        window.initializeMobileNav();
+    }
 });

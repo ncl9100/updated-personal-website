@@ -12,7 +12,7 @@ function initializeTypewriter() {
         if (currentPage.includes('index.html') || currentPage.endsWith('/')) {
             text = "I'm Nathan, a computer science and data science student at NYU with a passion for full-stack development and machine learning. I am currently a sophomore at NYU, and I'm excited to share my journey with you!";
         } else if (currentPage.includes('hobbies.html')) {
-            text = "When I'm not pulling all nighters in Bobst, you can find me pursuing these activities!";
+            text = "When I'm not pulling all nighters in Bobst, you can find me doing these activities!";
         } else {
             // Default text for other pages
             text = "Welcome to my website!";

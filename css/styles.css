@@ -58,6 +58,7 @@ nav{
     border-radius: 10px;
     width: 70%;
     margin: 0 auto 20px;
+    position: relative;
 }
 nav ul{
     display: flex;
@@ -76,6 +77,328 @@ nav a{
 }
 nav a:hover{
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger menu button - hidden by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    /* Tablet styles */
+    .header-images {
+        margin-left: 100px;
+        gap: 15px;
+    }
+    
+    .profile-pic, .nyu-logo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    nav {
+        width: 95% !important;
+        padding: 12px 15px !important;
+        justify-content: center !important;
+    }
+    
+    nav ul {
+        gap: 6px !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    nav ul li {
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    nav a {
+        padding: 6px 8px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        min-width: fit-content !important;
+        margin: 0 !important;
+    }
+    
+    .content {
+        width: 85%;
+        padding: 30px;
+    }
+    
+    header, footer {
+        width: 85%;
+    }
+}
+
+/* Additional tablet-specific override */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        gap: 6px !important;
+    }
+    
+    nav a {
+        padding: 6px 8px !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobile styles */
+    .header-images {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .profile-pic, .nyu-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    nav {
+        width: 95%;
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+    
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    /* Hide regular nav menu by default on mobile */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #57068C;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    /* Show nav menu when active */
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 0;
+    }
+    
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    header, footer {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Experience items mobile layout */
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .experience-details {
+        text-align: left;
+        margin-left: 0;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .date {
+        font-size: 0.9rem;
+    }
+    
+    .location {
+        font-size: 0.8rem;
+    }
+    
+    /* Contact grid mobile layout */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .contact-item {
+        min-height: auto;
+        padding: 20px;
+    }
+    
+    /* Project items mobile layout */
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .project-details {
+        text-align: left;
+        margin-left: 0;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .project-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Skills container mobile */
+    .skills-container {
+        height: 300px;
+        padding: 15px;
+    }
+    
+    .skill-bubble {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Small mobile styles */
+    .profile-pic, .nyu-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+    
+    header, footer {
+        padding: 20px 15px;
+    }
+    
+    /* Abbreviate dates for very small screens */
+    .date {
+        font-size: 0.85rem;
+    }
+    
+    .experience-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-content p {
+        font-size: 1rem;
+    }
+    
+    /* Compact contact items */
+    .contact-item {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .contact-icon svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .contact-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-detail {
+        font-size: 1rem;
+    }
+    
+    /* Compact project items */
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .project-link {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
 }
 .content{
     background-color: ghostwhite;
