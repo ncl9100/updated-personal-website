@@ -7,5 +7,9 @@ Personal portfolio website to showcase experience, projects, and campus/club inv
 Frontend:
   - HTML
   - CSS
+
 Backend:
-  - JavaScript
+  - Javascript
+
+
+    
